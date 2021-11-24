@@ -17,7 +17,7 @@
 
 <body>
 
-	<h1 class="text-center my-5">DHARGYAL TODOS PAGE</h1>
+	<h1 class="text-center my-5">DHARGYAL TODOS PAGE ASSIGNMENT</h1>
 
 	<div class="row justify-content-center">
 		<div class="col-md-8">
