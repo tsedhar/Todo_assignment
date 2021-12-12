@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-	<meta charset="UTF-8">
-
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+<?php $__env->startSection('title'); ?>
 	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
-</head>
-	
-	<title>Todos</title>
+	Todo list
 
-<body>
+<?php $__env->stopSection(); ?>
 
-	<h1 class="text-center my-5">DHARGYAL TODOS PAGE</h1>
+<?php $__env->startSection('content'); ?>
+
+	<h1 class="text-center my-5">DHARGYAL TODOS PAGE ASSIGNMENT</h1>
 
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 
-		<div class="container">
 			
 			<div class="card card-default">
 	
@@ -35,6 +23,8 @@
 					<li class="list-group-item">
 						<?php echo e($todo ->name); ?>
 
+
+						<a href="/todos/<?php echo e($todo->id); ?>" class="btn btn-primary btn-sm float-end">view</a>
 					</li>
 					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 	
@@ -42,10 +32,9 @@
 				</div>
 
 			</div>
-		</div>
 	</div>
 	</div>
-</body>
 
-</html>
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/todos-app/resources/views/todos/index.blade.php ENDPATH**/ ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/todos-app/resources/views/todos/index.blade.php ENDPATH**/ ?>

@@ -1,28 +1,18 @@
-<!DOCTYPE html>
+@extends('layouts.app')
 
-<html lang="en">
-
-<head>
-
-	<meta charset="UTF-8">
-
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+@section('title')
 	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
-</head>
-	
-	<title>Todos</title>
+	Todo list
 
-<body>
+@endsection
+
+@section('content')
 
 	<h1 class="text-center my-5">DHARGYAL TODOS PAGE ASSIGNMENT</h1>
 
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 
-		<div class="container">
 			
 			<div class="card card-default">
 	
@@ -34,6 +24,8 @@
 
 					<li class="list-group-item">
 						{{ $todo ->name}}
+
+						<a href="/todos/{{ $todo->id }}" class="btn btn-primary btn-sm float-end">view</a>
 					</li>
 					@endforeach
 	
@@ -41,9 +33,7 @@
 				</div>
 
 			</div>
-		</div>
 	</div>
 	</div>
-</body>
 
-</html>
+@endsection
